@@ -5,7 +5,7 @@ import state from './state'
 Vue.use(Vuex)
 
 export function creatStore() {
-    return Vuex.Store({
+    return new Vuex.Store({
         state
     })
 }

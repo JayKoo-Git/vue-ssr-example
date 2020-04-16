@@ -3,12 +3,17 @@ import { creatStore } from './store'
 import { createRouter } from './router'
 
 export function createApp() {
+    
     const store = creatStore()
 
     const router = createRouter()
-    return new Vue({
+
+    const app = new Vue({
         store,
         router,
         render: h => h(App)
     })
+
+    return { app, store, router }
+
 }
