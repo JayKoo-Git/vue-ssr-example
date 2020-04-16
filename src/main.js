@@ -1,7 +1,14 @@
 import Vue from 'vue'
+import { creatStore } from './store'
+import { createRouter } from './router'
 
 export function createApp() {
-    return new Vue({
+    const store = creatStore()
 
+    const router = createRouter()
+    return new Vue({
+        store,
+        router,
+        render: h => h(App)
     })
 }
